@@ -1,0 +1,735 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semantics.interactions.ics.unisg.ch/smartfarming#"
+     xml:base="http://semantics.interactions.ics.unisg.ch/smartfarming"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#actsUpon -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#actsUpon"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasComponent"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasCrop -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasCrop"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasEquipment"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasLand -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasLand"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasSection -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasSection"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#needsEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#needsEquipment"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#observes -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#observes"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#usesSubstance -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#usesSubstance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasHighLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasHighLimit"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasIndex"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasLinkRelation -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasLinkRelation"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasLowLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasLowLimit"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasUrl"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#isDirectedEdge -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#isDirectedEdge"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#ActuationValue -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#ActuationValue">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Actuator -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Actuator">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Agent -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Agent"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Agriculturalist -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Agriculturalist">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#HumanAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Arc -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Arc">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#GeometricEdge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Battery -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Battery">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#EnergySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#BatteryCharger -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#BatteryCharger">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#EnergySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Component -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Component">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeder -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeder">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#EnergySource -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#EnergySource">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Farm -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Farm">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasLand"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLand -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLand">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasSection"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasCrop"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Path"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Farmer -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Farmer">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#HumanAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilization -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilization">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#needsEquipment"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerSprayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#usesSubstance"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilizer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationSpecification -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationSpecification">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilizer -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilizer">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerSprayer -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerSprayer">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#usesSubstance"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilizer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#GeometricEdge -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#GeometricEdge">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Geometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#GeometricNode -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#GeometricNode">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Geometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Geometry -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Geometry">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#HumanAgent -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#HumanAgent">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Humidity -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Humidity">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#HumiditySensor -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#HumiditySensor">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Humidity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Irrigation -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Irrigation">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#needsEquipment"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Irrigator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationSpecification -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationSpecification">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Irrigator -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Irrigator">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#usesSubstance"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Water"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#LidarSensor -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#LidarSensor">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Line -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Line">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#GeometricEdge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Link -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Link"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Machine -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Maize -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Maize">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Motor -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Motor">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Path -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Path">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Geometry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Waypoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Plant -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Position -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Position">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Process -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Process"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Rice -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Rice">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Sensor -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Sensor">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#SmartTractor -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SmartTractor">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasEquipment"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#SoftwareAgent -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoftwareAgent">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#actsUpon"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#SoilConditionSensor -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilConditionSensor">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilNitrate"/>
+                    <rdf:Description rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilPh"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                        <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilMoisture"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#SoilMoisture -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilMoisture">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#SoilNitrate -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilNitrate">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#SoilPh -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilPh">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Substance -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Substance">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Tank -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Tank">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Technician -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Technician">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#HumanAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Temperature -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Temperature">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#TemperatureSensor -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Water -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Water">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Waypoint -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Waypoint">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Geometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Wheat -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Wheat">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

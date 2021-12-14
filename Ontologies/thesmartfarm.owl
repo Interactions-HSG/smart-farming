@@ -1,0 +1,141 @@
+@prefix : <http://example.org/farmlab#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/farmlab> .
+
+<http://example.org/farmlab> rdf:type owl:Ontology ;
+                              owl:imports <http://semantics.interactions.ics.unisg.ch/smartfarming#> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding
+<http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://semantics.interactions.ics.unisg.ch/smartfarming#needsEquipment> ;
+                                                                                      owl:someValuesFrom <http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeder>
+                                                                                    ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/farmlab#battery1
+:battery1 rdf:type owl:NamedIndividual ,
+                   <http://semantics.interactions.ics.unisg.ch/smartfarming#Battery> .
+
+
+###  http://example.org/farmlab#battery2
+:battery2 rdf:type owl:NamedIndividual ,
+                   <http://semantics.interactions.ics.unisg.ch/smartfarming#Battery> .
+
+
+###  http://example.org/farmlab#battery3
+:battery3 rdf:type owl:NamedIndividual ,
+                   <http://semantics.interactions.ics.unisg.ch/smartfarming#Battery> .
+
+
+###  http://example.org/farmlab#battery4
+:battery4 rdf:type owl:NamedIndividual ,
+                   <http://semantics.interactions.ics.unisg.ch/smartfarming#Battery> .
+
+
+###  http://example.org/farmlab#crop_wheat_1
+:crop_wheat_1 rdf:type owl:NamedIndividual ,
+                       <http://semantics.interactions.ics.unisg.ch/smartfarming#Wheat> ;
+              <http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest> :spec_irrigation_wheat .
+
+
+###  http://example.org/farmlab#deweeder1
+:deweeder1 rdf:type owl:NamedIndividual ,
+                    <http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeder> .
+
+
+###  http://example.org/farmlab#farm1
+:farm1 rdf:type owl:NamedIndividual ,
+                <http://semantics.interactions.ics.unisg.ch/smartfarming#Farm> ;
+       <http://semantics.interactions.ics.unisg.ch/smartfarming#hasLand> :land1 .
+
+
+###  http://example.org/farmlab#irrigator1
+:irrigator1 rdf:type owl:NamedIndividual ,
+                     <http://semantics.interactions.ics.unisg.ch/smartfarming#Irrigator> .
+
+
+###  http://example.org/farmlab#land1
+:land1 rdf:type owl:NamedIndividual ,
+                <http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLand> ;
+       <http://semantics.interactions.ics.unisg.ch/smartfarming#hasSection> :land1_part1 ,
+                                                                            :land1_part2 .
+
+
+###  http://example.org/farmlab#land1_part1
+:land1_part1 rdf:type owl:NamedIndividual ,
+                      <http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection> ;
+             <http://semantics.interactions.ics.unisg.ch/smartfarming#hasCrop> :crop_wheat_1 .
+
+
+###  http://example.org/farmlab#land1_part1_path
+:land1_part1_path rdf:type owl:NamedIndividual ,
+                           <http://semantics.interactions.ics.unisg.ch/smartfarming#Path> .
+
+
+###  http://example.org/farmlab#land1_part2
+:land1_part2 rdf:type owl:NamedIndividual ,
+                      <http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection> .
+
+
+###  http://example.org/farmlab#lidar1
+:lidar1 rdf:type owl:NamedIndividual ,
+                 <http://semantics.interactions.ics.unisg.ch/smartfarming#LidarSensor> .
+
+
+###  http://example.org/farmlab#lidar2
+:lidar2 rdf:type owl:NamedIndividual ,
+                 <http://semantics.interactions.ics.unisg.ch/smartfarming#LidarSensor> .
+
+
+###  http://example.org/farmlab#soilsensor1
+:soilsensor1 rdf:type owl:NamedIndividual ,
+                      <http://semantics.interactions.ics.unisg.ch/smartfarming#SoilConditionSensor> .
+
+
+###  http://example.org/farmlab#spec_irrigation_wheat
+:spec_irrigation_wheat rdf:type owl:NamedIndividual ,
+                                <http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationSpecification> ;
+                       <http://semantics.interactions.ics.unisg.ch/smartfarming#hasHighLimit> 20 ;
+                       <http://semantics.interactions.ics.unisg.ch/smartfarming#hasLowLimit> 10 .
+
+
+###  http://example.org/farmlab#sprayer1
+:sprayer1 rdf:type owl:NamedIndividual ,
+                   <http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerSprayer> .
+
+
+###  http://example.org/farmlab#tractorbot_spock
+:tractorbot_spock rdf:type owl:NamedIndividual ,
+                           <http://semantics.interactions.ics.unisg.ch/smartfarming#SmartTractor> ;
+                  <http://semantics.interactions.ics.unisg.ch/smartfarming#hasComponent> :battery1 ,
+                                                                                         :irrigator1 ,
+                                                                                         :lidar2 ,
+                                                                                         :sprayer1 .
+
+
+###  http://example.org/farmlab#tractorbot_tribble
+:tractorbot_tribble rdf:type owl:NamedIndividual ,
+                             <http://semantics.interactions.ics.unisg.ch/smartfarming#SmartTractor> ;
+                    <http://semantics.interactions.ics.unisg.ch/smartfarming#hasComponent> :deweeder1 .
+
+
+###  http://example.org/farmlab#tractorbot_uhura
+:tractorbot_uhura rdf:type owl:NamedIndividual ,
+                           <http://semantics.interactions.ics.unisg.ch/smartfarming#SmartTractor> ;
+                  <http://semantics.interactions.ics.unisg.ch/smartfarming#hasComponent> :battery2 ,
+                                                                                         :lidar1 .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
