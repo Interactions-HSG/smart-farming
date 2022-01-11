@@ -1,0 +1,112 @@
+@prefix : <http://semantics.interactions.ics.unisg.ch/smartfarming#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix agro: <http://purl.obolibrary.org/obo/agro/releases/2021-11-05/agro.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix foodon: <http://purl.obolibrary.org/obo/agro/imports/foodon_import.owl#> .
+@prefix autoFarm: <http://semantics.interactions.ics.unisg.ch/smartfarming#> .
+@prefix smartFarm: <http://semantics.interactions.ics.unisg.ch/smartfarming#> .
+@base <http://semantics.interactions.ics.unisg.ch/smartfarming> .
+
+<http://semantics.interactions.ics.unisg.ch/smartfarming> rdf:type owl:Ontology ;
+                                                           owl:imports <http://purl.obolibrary.org/obo/agro/imports/foodon_import.owl> ,
+                                                                       <http://purl.obolibrary.org/obo/agro/releases/2021-11-05/agro.owl> ,
+                                                                       ssn: .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/AGRO_00000125
+<http://purl.obolibrary.org/obo/AGRO_00000125> rdfs:subClassOf smartFarm:SmartTractor .
+
+
+###  http://purl.obolibrary.org/obo/AGRO_00000126
+<http://purl.obolibrary.org/obo/AGRO_00000126> rdfs:subClassOf smartFarm:SmartTractor .
+
+
+###  http://purl.obolibrary.org/obo/AGRO_00000416
+<http://purl.obolibrary.org/obo/AGRO_00000416> rdfs:subClassOf smartFarm:Equipment .
+
+
+###  http://purl.obolibrary.org/obo/AGRO_00002071
+<http://purl.obolibrary.org/obo/AGRO_00002071> rdf:type owl:Class ;
+                                               rdfs:subClassOf smartFarm:Process .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_00000078
+<http://purl.obolibrary.org/obo/ENVO_00000078> rdfs:subClassOf smartFarm:Artifact .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_00010483
+<http://purl.obolibrary.org/obo/ENVO_00010483> rdfs:subClassOf smartFarm:Substance .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Agent
+smartFarm:Agent rdf:type owl:Class .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact
+smartFarm:Artifact rdf:type owl:Class .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Component
+smartFarm:Component rdf:type owl:Class ;
+                    rdfs:subClassOf smartFarm:Artifact ;
+                    rdfs:comment "why do we need this class?" .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment
+smartFarm:Equipment rdf:type owl:Class ;
+                    rdfs:subClassOf smartFarm:Component ;
+                    rdfs:comment "Fertilization implement http://purl.obolibrary.org/obo/AGRO_00000227" ,
+                                 "Smart Tractor http://semantics.interactions.ics.unisg.ch/smartfarming#SmartTractor" ,
+                                 "irrigation equipment http://purl.obolibrary.org/obo/AGRO_00000241" ,
+                                 "tractor http://purl.obolibrary.org/obo/AGRO_00000124" ,
+                                 "weeding implement http://purl.obolibrary.org/obo/AGRO_00002006" .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#HumanAgent
+smartFarm:HumanAgent rdf:type owl:Class ;
+                     rdfs:subClassOf smartFarm:Agent .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Link
+smartFarm:Link rdf:type owl:Class ;
+               rdfs:comment "what is this one for?" .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Process
+smartFarm:Process rdf:type owl:Class ;
+                  rdfs:comment "Fertilization http://purl.obolibrary.org/obo/AGRO_01000000" ,
+                               "Irrigation http://purl.obolibrary.org/obo/AGRO_00000006" ,
+                               "Pest control process http://purl.obolibrary.org/obo/AGRO_00000023" ,
+                               "Weeding http://purl.obolibrary.org/obo/AGRO_00020006" .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#SmartTractor
+smartFarm:SmartTractor rdf:type owl:Class ;
+                       rdfs:subClassOf <http://purl.obolibrary.org/obo/AGRO_00000416> .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#SoftwareAgent
+smartFarm:SoftwareAgent rdf:type owl:Class ;
+                        rdfs:subClassOf smartFarm:Agent .
+
+
+###  http://semantics.interactions.ics.unisg.ch/smartfarming#Substance
+smartFarm:Substance rdf:type owl:Class ;
+                    rdfs:comment "Maybe a better name is environmental material" ,
+                                 "agronomic fertilizer  http://purl.obolibrary.org/obo/AGRO_00002062" ,
+                                 "water http://purl.obolibrary.org/obo/ENVO_00002006" .
+
+
+###  http://www.w3.org/ns/ssn/System
+ssn:System rdfs:subClassOf smartFarm:Artifact .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

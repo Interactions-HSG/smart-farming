@@ -1,0 +1,6 @@
+[submodule "Ontologies_Integrated/agro"]
+	path = Ontologies_Integrated/agro
+	url = https://github.com/AgriculturalSemantics/agro.git
+[submodule "Ontologies_Integrated/foodon"]
+	path = Ontologies_Integrated/foodon
+	url = https://github.com/FoodOntology/foodon.git
