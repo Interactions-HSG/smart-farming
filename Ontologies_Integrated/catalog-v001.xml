@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://www.w3.org/2019/wot/td#" uri="td/td.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
         <uri id="Automatically generated entry, Timestamp=1641881961033" name="/imports/pco_import.owl" uri="agro/imports/pco_import.owl"/>
         <uri id="Automatically generated entry, Timestamp=1641881961033" name="http://genepio.org/lexmapr/imports/agency_categories.owl" uri="foodon/src/ontology/imports/crossreference/agency_categories.owl"/>
