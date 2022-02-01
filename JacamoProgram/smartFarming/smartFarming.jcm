@@ -1,0 +1,40 @@
+/*
+    smartFarming
+    ---------------------------
+
+    JaCaMo Application File
+
+    This file defines the initial state of the MAS (initial agents, environment, organisation, ....)
+
+    (see jacamo/doc/jcm.html for more information about what can be defined in this file)
+
+    JaCaMo 1.0
+    Januar 26, 2022 - 17:17:02
+*/
+
+mas smartFarming {
+
+    agent m1:manager.asl {
+    	join: farm
+    	focus:farm.kg
+    }
+	agent t1:tractor.asl {
+		join: farm
+		focus:farm.kg
+	}
+    agent t2:tractor.asl{
+    	join: farm
+    	focus:farm.kg
+    }
+    agent f1:farmer.asl{
+    	join: farm
+    	focus:farm.kg
+    	goals:survey
+    }
+    
+    workspace farm {
+    	artifact kg: farm.KnowledgeGraph(10)
+    }
+
+}
+
