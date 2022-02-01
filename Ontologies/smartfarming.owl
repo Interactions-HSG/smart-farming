@@ -51,6 +51,12 @@
     
 
 
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasIrrigationSpec -->
+
+    <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasIrrigationSpec"/>
+    
+
+
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasLand -->
 
     <owl:ObjectProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasLand"/>
@@ -92,6 +98,24 @@
     
 
 
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#currentVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#currentVolume"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasArea -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasArea"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasCharge -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasCharge"/>
+    
+
+
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasHighLimit -->
 
     <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasHighLimit"/>
@@ -101,6 +125,12 @@
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasIndex -->
 
     <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasIndex"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#hasIrrigationRate -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#hasIrrigationRate"/>
     
 
 
@@ -128,6 +158,18 @@
     
 
 
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#maxVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#maxVolume"/>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#minVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#minVolume"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -151,7 +193,6 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Actuator">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Component"/>
-        <rdfs:comment>http://www.w3.org/ns/sosa/Actuator</rdfs:comment>
     </owl:Class>
     
 
@@ -166,7 +207,6 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Process"/>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00002071</rdfs:comment>
     </owl:Class>
     
 
@@ -187,9 +227,17 @@
     
 
 
-    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact -->
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Area -->
 
-    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Area">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
     
 
 
@@ -212,8 +260,7 @@
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Component -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Component">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
-        <rdfs:comment>What is the difference between equipment or machine? is it an IoT component?</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
     </owl:Class>
     
 
@@ -222,8 +269,22 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeder">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine"/>
-        <rdfs:comment>Weeding Implement</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00002006</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Drone -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Drone">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine"/>
     </owl:Class>
     
 
@@ -239,9 +300,7 @@
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
-        <rdfs:comment>Agricultural Implement</rdfs:comment>
-        <rdfs:comment>Do we need this class? can we have agricultural implement right away?</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
     </owl:Class>
     
 
@@ -249,7 +308,7 @@
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Farm -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Farm">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasLand"/>
@@ -257,8 +316,6 @@
                 <owl:onClass rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>An area of land which is used for the cultivation of crops or grazing of livestock, including any agricultural constructions therein.</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/ENVO_00000078</rdfs:comment>
     </owl:Class>
     
 
@@ -266,15 +323,13 @@
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLand -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLand">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasSection"/>
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>arable land</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/ENVO_01001177</rdfs:comment>
     </owl:Class>
     
 
@@ -282,7 +337,7 @@
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasCrop"/>
@@ -295,7 +350,6 @@
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Path"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>What is the difference between FarmLand and Farm Land section?</rdfs:comment>
     </owl:Class>
     
 
@@ -310,9 +364,7 @@
 
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest -->
 
-    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest">
-        <rdfs:comment>http://www.w3.org/ns/sosa/FeatureOfInterest</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
     
 
 
@@ -338,7 +390,6 @@
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilizer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_01000000</rdfs:comment>
     </owl:Class>
     
 
@@ -347,7 +398,14 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationSpecification">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification"/>
-        <rdfs:comment>What is the difference between the fertilization specification and the process?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationType -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationType">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#TypeEnumeration"/>
     </owl:Class>
     
 
@@ -356,7 +414,6 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilizer">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Substance"/>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00002062</rdfs:comment>
     </owl:Class>
     
 
@@ -371,8 +428,14 @@
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Fertilizer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Fertilization implement</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00000227</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerType -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerType">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#TypeEnumeration"/>
     </owl:Class>
     
 
@@ -397,6 +460,14 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Geometry">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Harvesting -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Harvesting">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
     </owl:Class>
     
 
@@ -447,7 +518,6 @@
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Irrigator"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00000006</rdfs:comment>
     </owl:Class>
     
 
@@ -456,6 +526,14 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationSpecification">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationType -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationType">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#TypeEnumeration"/>
     </owl:Class>
     
 
@@ -470,7 +548,6 @@
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Water"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00000241</rdfs:comment>
     </owl:Class>
     
 
@@ -507,8 +584,6 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Machine">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment"/>
-        <rdfs:comment>Agricultural implement</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00000416</rdfs:comment>
     </owl:Class>
     
 
@@ -551,11 +626,10 @@
     
 
 
-    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#PestControlProcess -->
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Pesticide -->
 
-    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#PestControlProcess">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00000023</rdfs:comment>
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Pesticide">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Substance"/>
     </owl:Class>
     
 
@@ -563,15 +637,21 @@
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Plant -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Plant ontology?</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/PO_0000003</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Ploughing -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Ploughing">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
     </owl:Class>
     
 
@@ -586,7 +666,14 @@
 
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Process -->
 
-    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Process"/>
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Process">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#hasFeatureOfInterest"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#ProcessSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -598,11 +685,18 @@
     
 
 
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Regulation -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Regulation">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Rice -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Rice">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant"/>
-        <rdfs:comment>http://purl.obolibrary.org/obo/po#Rice</rdfs:comment>
     </owl:Class>
     
 
@@ -611,7 +705,6 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Sensor">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Component"/>
-        <rdfs:comment>http://www.w3.org/ns/sosa/Sensor</rdfs:comment>
     </owl:Class>
     
 
@@ -626,8 +719,6 @@
                 <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Equipment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Subclass of tractor</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00000124</rdfs:comment>
     </owl:Class>
     
 
@@ -639,7 +730,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#actsUpon"/>
-                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
+                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -690,10 +781,34 @@
     
 
 
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#TypeEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Sowing -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Sowing">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
+    </owl:Class>
+    
+
+
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Substance -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Substance">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artifact"/>
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Survey -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Survey">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
     </owl:Class>
     
 
@@ -702,8 +817,6 @@
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Tank">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Component"/>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00000590</rdfs:comment>
-        <rdfs:comment>water thank?</rdfs:comment>
     </owl:Class>
     
 
@@ -738,12 +851,34 @@
     
 
 
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Threshing -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Threshing">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#AgriculturalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#TypeEnumeration -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#TypeEnumeration">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Volume -->
+
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Volume">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
+    </owl:Class>
+    
+
+
     <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Water -->
 
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Water">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Substance"/>
-        <rdfs:comment>Environmental Ontology</rdfs:comment>
-        <rdfs:comment>http://purl.obolibrary.org/obo/ENVO_00002011</rdfs:comment>
     </owl:Class>
     
 
@@ -756,11 +891,10 @@
     
 
 
-    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Weeding -->
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Weight -->
 
-    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Weeding">
-        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#PestControlProcess"/>
-        <rdfs:comment>http://purl.obolibrary.org/obo/AGRO_00020006</rdfs:comment>
+    <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Weight">
+        <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Measurement"/>
     </owl:Class>
     
 
@@ -770,9 +904,155 @@
     <owl:Class rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Wheat">
         <rdfs:subClassOf rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Plant"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#alfisol_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#alfisol_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#basal_fertilization -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#basal_fertilization">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#canal_irrigation -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#canal_irrigation">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#clay_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#clay_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#drip_irrigation -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#drip_irrigation">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#inorganic_fertilizer -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#inorganic_fertilizer">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#loamy_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#loamy_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#manual_irrigation -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#manual_irrigation">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#nitosol_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#nitosol_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#organic_fertilizer -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#organic_fertilizer">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#oxisol_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#oxisol_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#planosol_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#planosol_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#sandy_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#sandy_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#spray_irrigation -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#spray_irrigation">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#topical_fertilization -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#topical_fertilization">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FertilizationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#ultisol_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#ultisol_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#vertisol_soil -->
+
+    <owl:NamedIndividual rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#vertisol_soil">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#SoilType"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
