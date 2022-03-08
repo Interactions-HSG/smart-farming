@@ -1,0 +1,43 @@
+@prefix td:    <https://www.w3.org/2019/wot/td#> .
+@prefix htcl:  <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix js:    <https://www.w3.org/2019/wot/json-schema#> .
+@prefix htv:   <http://www.w3.org/2011/http#> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+<urn:kg>  dct:title                  "knowledgeGraph" ;
+        td:baseURI                   "http://10.2.2.33:1880/r402/theglobe" ;
+        td:definesSecurityScheme     <_:b0> ;
+        td:description               "Knowledge graph for smartfarm" ;
+        td:hasPropertyAffordance     <_:b3> , <_:b1> ;
+        td:hasSecurityConfiguration  <file:///C:/Data/Personal/PhD/Sources/repo/smart-farming/ThingDescriptions/nosec_sc> ;
+        td:title                     "knowledgeGraph" .
+
+<_:b1>  a                js:IntegerSchema ;
+        dct:title        "soilState" ;
+        js:readOnly      "true" ;
+        td:description   "Soil state" ;
+        td:hasForm       <_:b2> ;
+        td:isObservable  "false" ;
+        td:name          "soilState" ;
+        td:title         "soilState" .
+
+<_:b4>  htcl:hasOperationType  td:readProperty ;
+        htcl:hasTarget         <http://localhost:1880/query?query=farm:land1_part1%20smrtfrm:hasRequiredWater%20?answer> .
+
+<_:b2>  htcl:hasOperationType  td:readProperty ;
+        htcl:hasTarget         <http://localhost:1880/query?query=farm:land1_part1%20smrtfrm:hasSoilState%20?answer> .
+
+<_:b0>  a                            wotsec:NoSecurityScheme ;
+        td:hasInstanceConfiguration  <file:///C:/Data/Personal/PhD/Sources/repo/smart-farming/ThingDescriptions/nosec_sc> .
+
+<_:b3>  a                js:IntegerSchema ;
+        dct:title        "getIrrigationRequirements" ;
+        js:readOnly      "true" ;
+        td:description   "Irrigation needs" ;
+        td:hasForm       <_:b4> ;
+        td:isObservable  "false" ;
+        td:name          "getIrrigationRequirements" ;
+        td:title         "getIrrigationRequirements" .

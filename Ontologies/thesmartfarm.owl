@@ -5,6 +5,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:baap="http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:smartfarming="http://semantics.interactions.ics.unisg.ch/smartfarming#">
@@ -25,33 +26,21 @@
     
 
 
+    <!-- http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#hasRequiredSoilMoisture -->
+
+    <owl:AnnotationProperty rdf:about="http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#hasRequiredSoilMoisture"/>
+    
+
+
+    <!-- http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#hasSoilMoisture -->
+
+    <owl:AnnotationProperty rdf:about="http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#hasSoilMoisture"/>
+    
+
+
     <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
 
     <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding -->
-
-    <rdf:Description rdf:about="http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeding">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#needsEquipment"/>
-                <owl:someValuesFrom rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Deweeder"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
     
 
 
@@ -162,6 +151,9 @@
         <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection"/>
         <smartfarming:hasCrop rdf:resource="http://example.org/farmlab#crop_wheat_1"/>
         <smartfarming:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</smartfarming:hasArea>
+        <smartfarming:hasRequiredWater rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</smartfarming:hasRequiredWater>
+        <smartfarming:hasSoilMoisture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</smartfarming:hasSoilMoisture>
+        <smartfarming:hasSoilState rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</smartfarming:hasSoilState>
     </owl:NamedIndividual>
     
 
@@ -178,6 +170,9 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/farmlab#land1_part2">
         <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#FarmLandSection"/>
+        <smartfarming:hasCrop rdf:resource="http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#crop_maize_1"/>
+        <smartfarming:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</smartfarming:hasArea>
+        <baap:hasSoilMoisture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</baap:hasSoilMoisture>
     </owl:NamedIndividual>
     
 
@@ -211,6 +206,7 @@
     <owl:NamedIndividual rdf:about="http://example.org/farmlab#spec_irrigation_wheat">
         <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#IrrigationSpecification"/>
         <smartfarming:hasIrrigationRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</smartfarming:hasIrrigationRate>
+        <baap:hasRequiredSoilMoisture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</baap:hasRequiredSoilMoisture>
     </owl:NamedIndividual>
     
 
@@ -251,6 +247,16 @@
         <smartfarming:hasComponent rdf:resource="http://example.org/farmlab#battery2"/>
         <smartfarming:hasComponent rdf:resource="http://example.org/farmlab#irrgator2"/>
         <smartfarming:hasComponent rdf:resource="http://example.org/farmlab#lidar1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#crop_maize_1 -->
+
+    <owl:NamedIndividual rdf:about="http://semantics-based-bas.code.siemens.io/semantic-ba-model/baap#crop_maize_1">
+        <rdf:type rdf:resource="http://semantics.interactions.ics.unisg.ch/smartfarming#Maize"/>
+        <smartfarming:hasIrrigationRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</smartfarming:hasIrrigationRate>
+        <baap:hasRequiredSoilMoisture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</baap:hasRequiredSoilMoisture>
     </owl:NamedIndividual>
 </rdf:RDF>
 

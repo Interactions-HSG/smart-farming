@@ -33,7 +33,7 @@
 		"ph":{"type":"integer", "minimum":0, "maximum":255},
 		"moisture":{"type":"integer", "minimum":0, "maximum":255},
 		"density":{"type":"integer", "minimum":0, "maximum":255},
-		"nitrate":{"type":"integer", "minimum":0, "maximum":255},
+		"nitrate":{"type":"integer", "minimum":0, "maximum":255}
 	  },	  
       "forms": [
         {

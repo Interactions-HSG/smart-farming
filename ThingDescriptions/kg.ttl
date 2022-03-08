@@ -1,0 +1,56 @@
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix smrtfrm: <http://semantics.interactions.ics.unisg.ch/smartfarming#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:farm_kg> a td:Thing, smrtfrm:KG;
+  dct:title "Knowledge Graph as Artifact";
+  td:hasSecurityConfiguration [ a wotsec:NoSecurityScheme
+    ];
+  td:hasBase <http://10.10.10.103/>;
+	td:hasPropertyAffordance [ a td:PropertyAffordance, smrtfrm:SoilState, js:NumberSchema;
+      td:name "soilState";
+      dct:description "Soil condition of Section 1";
+      td:hasForm [
+          hctl:hasTarget <http://localhost:1880/query?query=farm:land1_part1%20smrtfrm:hasSoilState%20?answer>;
+          hctl:forContentType "application/json";
+          hctl:hasOperationType td:readProperty
+        ];
+      td:isObservable false
+    ];
+	td:hasActionAffordance [ a td:ActionAffordance, smrtfrm:ProcessRequirement;
+      dct:title "process requirement";
+      td:name "getProcessSpecification";
+      dct:description "Get the specification for the process";
+      td:hasForm [
+          htv:methodName "GET";
+          hctl:hasTarget <http://localhost:1880/action/getProcessSpecification?query=farm:land1_part1%20smrtfrm:hasRequiredWater%20?answer>;
+          hctl:forContentType "application/json";
+          hctl:hasOperationType td:invokeAction
+        ];
+      td:hasInputSchema [ a js:ObjectSchema;
+          js:properties [ a js:IntegerSchema;
+              js:propertyName "processCode";
+              js:minimum "0"^^xsd:int;
+              js:maximum "20000"^^xsd:int
+            ], [ a js:IntegerSchema;
+              js:propertyName "sectionId";
+              js:minimum "0"^^xsd:int;
+              js:maximum "100"^^xsd:int
+            ]
+         ];
+      td:hasOutputSchema [ a js:ObjectSchema;
+          js:properties [ a js:IntegerSchema;
+              js:propertyName "requiredSubstance";
+              js:minimum "0"^^xsd:int;
+              js:maximum "2000"^^xsd:int
+            ],[ a js:StringSchema;
+              js:propertyName "requiredImplement";
+            ]			
+         ]		 
+      ].

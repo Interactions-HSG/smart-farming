@@ -1,0 +1,45 @@
+{
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "title": "knowledgeGraph",
+  "id": "urn:kg",
+  "base": "http://10.2.2.33:1880/r402/theglobe",
+  "description": "Knowledge graph for smartfarm",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "soilState": {
+      "title": "soilState",
+      "observable": false,
+      "readOnly": true,
+      "description": "Soil state",
+      "type": "integer",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "http://localhost:1880/query?query=farm:land1_part1%20smrtfrm:hasSoilState%20?answer"
+        }
+      ]
+    },
+    "getIrrigationRequirements": {
+      "title": "getIrrigationRequirements",
+      "observable": false,
+      "readOnly": true,
+      "description": "Irrigation needs",
+      "type": "integer",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "http://localhost:1880/query?query=farm:land1_part1%20smrtfrm:hasRequiredWater%20?answer"
+        }
+      ]
+    }	
+	}
+}
